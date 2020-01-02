@@ -1,9 +1,6 @@
 # Deus
-https://www.deus-ai.com/  
-Deus is an open-source and cross-platform AI sidekick to help you control your computer. Be part of making Deus better.
-
-which has the potential to be something much bigger, and much better at empowering the people using it.
-This is where you come into play. Be part of making Notes better.
+Deus is an open-source and cross-platform AI sidekick to help you control your computer. Be part of making Deus better.  
+https://www.deus-ai.com/   
 
 ## Dependencies
 
