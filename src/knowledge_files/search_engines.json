@@ -1,0 +1,12 @@
+{
+  "google": "https://www.google.com/search?q=",
+  "youtube": "https://www.youtube.com/results/?q=",
+  "wikipedia": "https://en.wikipedia.org/?search=",
+  "bing": "https://www.bing.com/search?q=",
+  "ebay": "https://www.ebay.com/sch/i.html?_nkw=",
+  "amazon": "https://www.amazon.com/s/?field-keywords=",
+  "wikipedia, wiki": "https://en.wikipedia.org/wiki/Special:Search?search=",
+  "yahoo": "https://search.yahoo.com/search?p=",
+  "netflix": "https://www.netflix.com/search?q=",
+  "duck duck go, ddg": "https://duckduckgo.com/?q="
+}

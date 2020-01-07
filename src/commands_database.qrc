@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>commands_database/Commands_Database.xml</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,35 @@
+# Build dirs and files #
+########################
+*.pro.user
+build-Deus-*
+build-deus-*
+bin*
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+Makefile
+Deus
+qrc_images.cpp
+*.autosave
+*~
+*.snap
+*.swp
+__pycache__
+packaging/linux/deb_build/
+packaging/linux/snap/stage
+packaging/linux/snap/snap
+packaging/linux/snap/parts/samantha
+packaging/linux/snap/parts/desktop
+prime/
+squashfs-root/
+build/
+src/moc
+src/obj
+src/qrc
+src/snap
+src/uic
+src/deus
+.qmake.stash

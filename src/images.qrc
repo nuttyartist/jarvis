@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/textEdit_background_pattern.png</file>
+        <file>images/green.png</file>
+        <file>images/greenHovered.png</file>
+        <file>images/greenInHovered.png</file>
+        <file>images/greenInPressed.png</file>
+        <file>images/greenPressed.png</file>
+        <file>images/red.png</file>
+        <file>images/redHovered.png</file>
+        <file>images/redPressed.png</file>
+        <file>images/yellow.png</file>
+        <file>images/yellowHovered.png</file>
+        <file>images/yellowPressed.png</file>
+        <file>images/terminal-icon.png</file>
+        <file>images/deus_icon.png</file>
+        <file>images/deus_system_tray_listening.png</file>
+        <file>images/deus_system_tray_listening@2x.png</file>
+        <file>images/deus_system_tray_regular.png</file>
+        <file>images/deus_system_tray_regular@2x.png</file>
+        <file>images/background.png</file>
+        <file>images/lightbulb.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,959 @@
+<commands>
+	<node>
+		<name>search</name>
+		<action>
+			<function>google</function>
+			<keywords>for, about, regarding</keywords>
+			<entity>searchTerm</entity>
+		</action>
+		<node>
+			<name>web, internet</name>
+			<action>
+				<function>google</function>
+				<keywords>for, about, regarding</keywords>
+				<entity>searchTerm</entity>
+			</action>
+		</node>
+	</node>
+	<node>
+		<name>search, look for, look some</name>
+		<node>
+			<name>info, information</name>
+			<action>
+				<function>google</function>
+				<keywords>about, on, regarding</keywords>
+				<entity>searchTerm</entity>
+			</action>
+			<node>
+				<name>on google, in google, google</name>
+				<action>
+					<function>google</function>
+					<keywords>for</keywords>
+					<entity>searchTerm</entity>
+				</action>
+			</node>
+			<node>
+				<name>on wikipedia, in wikipedia, wikipedia, on wiki, in wiki, wiki</name>
+				<action>
+					<function>wikipedia</function>
+				</action>
+			</node>
+			<save>
+				<keywords>about, on</keywords>
+				<entity>searchTerm</entity>
+			</save>
+		</node>
+		<node>
+			<name>google</name>
+			<node>
+				<name>info, information</name>
+				<action>
+					<function>google</function>
+					<keywords>about, on, regarding</keywords>
+					<entity>searchTerm</entity>
+				</action>
+			</node>
+			<action>
+				<function>google</function>
+				<keywords>for</keywords>
+				<entity>searchTerm</entity>
+			</action>
+		</node>
+		<node>
+			<name>picture, pictures, image, images</name>
+			<action>
+				<function>googlePicturesSaved</function>
+				<keywords>of an, of a, of</keywords>
+				<entity>searchTermPicture</entity>
+			</action>
+			<node>
+				<name>of an, of a, of</name>
+				<action>
+					<function>googlePictures</function>
+					<entity>searchTermPicture</entity>
+				</action>
+			</node>
+		</node>
+		<node>
+			<name>[search_engines]</name>
+			<action>
+				<function>searchSpecificSearchEngine</function>
+				<keywords>for</keywords>
+				<entity>searchTerm</entity>
+			</action>
+		</node>
+		<node>
+			<name>on</name>
+			<node>
+				<name>[search_engines]</name>
+				<action>
+					<function>searchSpecificSearchEngine</function>
+				</action>
+			</node>
+		</node>
+		<save>
+			<keywords>on</keywords>
+			<entity>website</entity>
+		</save>
+	</node>
+	<node>
+		<name>how, what</name>
+		<node>
+			<name>look, looks</name>
+			<action>
+				<function>googlePictures</function>
+			</action>
+		</node>
+		<save>
+			<keywords>does a, do a, does, do</keywords>
+			<entity>searchTermPicture</entity>
+		</save>
+	</node>
+	<node>
+		<name>show, find</name>
+		<node>
+			<name>picture, pictures, image, images</name>
+			<action>
+				<function>googlePicturesSaved</function>
+				<entity>searchTermPicture</entity>
+			</action>
+			<node>
+				<name>of an, of a, of</name>
+				<action>
+					<function>googlePictures</function>
+					<entity>searchTermPicture</entity>
+				</action>
+			</node>
+		</node>
+		<node>
+			<name>videos, video</name>
+			<node>
+				<name>on youtube, in youtube, youtube</name>
+				<action>
+					<function>youtube</function>
+				</action>
+			</node>
+			<action>
+				<function>youtube</function>
+				<keywords>of an, of a, of, some</keywords>
+				<entity>searchTerm</entity>
+			</action>
+			<save>
+				<keywords>of an, of a, of, some</keywords>
+				<entity>searchTerm</entity>
+			</save>
+		</node>
+		<save>
+			<keywords>for some, for, me some, some, videos of, video of, me an, me a, me</keywords>
+			<entity>searchTermSaved</entity>
+		</save>
+	</node>
+	<node>
+		<name>what is a, what is an, what's a, what's an</name>
+		<action>
+			<function>wikipedia</function>
+			<entity>searchTerm</entity>
+		</action>
+	</node>
+	<node>
+		<name>tell me, research</name>
+		<node>
+			<name>about, on, about the</name>
+			<action>
+				<function>wikipedia</function>
+				<entity>searchTerm</entity>
+			</action>
+		</node>
+	</node>
+	<node>
+		<name>google</name>
+		<node>
+			<name>info, information</name>
+			<action>
+				<function>google</function>
+				<keywords>about, on, regarding</keywords>
+				<entity>searchTerm</entity>
+			</action>
+		</node>
+		<action>
+			<function>google</function>
+			<keywords>for</keywords>
+			<entity>searchTerm</entity>
+		</action>
+	</node>
+	<node>
+		<name>direction, directions</name>
+		<node>
+			<name>to</name>
+			<node>
+				<name>by</name>
+				<action>
+					<function>mapsDirection</function>
+					<entity>transport</entity>
+				</action>
+			</node>
+			<action>
+				<function>mapsDirection</function>
+				<entity>destination</entity>
+			</action>
+			<save>
+				<keywords>to</keywords>
+				<entity>destination</entity>
+			</save>
+		</node>
+		<save>
+			<keywords>from</keywords>
+			<entity>origin</entity>
+		</save>
+	</node>
+	<node>
+		<name>go, open, show me, show, launch, create</name>
+		<action>
+			<function>tryToOpenSpecificApp</function>
+			<entity>appToOpen</entity>
+		</action>
+		<node>
+			<name>[websites]</name>
+			<action>
+				<function>goToSpecificWebsite</function>
+			</action>
+		</node>
+		<node>
+			<name>[applications]</name>
+			<action>
+				<function>openSpecificApp</function>
+			</action>
+		</node>
+		<node>
+			<name>website, site</name>
+			<action>
+				<function>searchAndShow</function>
+			</action>
+		</node>
+		<node>
+			<name>[web_browsers]</name>
+			<node>
+				<name>new tabs, new tab, tabs, tab</name>
+				<action>
+					<function>openTabsInSpecificWebBrowser</function>
+				</action>
+			</node>
+			<node>
+				<name>window</name>
+				<action>
+					<function>openWindowInSpecificWebBrowser</function>
+				</action>
+			</node>
+		</node>
+		<node>
+			<name>new tabs, new tab, tabs, tab</name>
+			<node>
+				<name>[web_browsers]</name>
+				<action>
+					<function>openTabsInSpecificWebBrowser</function>
+				</action>
+			</node>
+		</node>
+		<node>
+			<name>window</name>
+			<node>
+				<name>[web_browsers]</name>
+				<action>
+					<function>openWindowInSpecificWebBrowser</function>
+				</action>
+			</node>
+		</node>
+		<node>
+			<name>new</name>
+			<node>
+				<name>tab, tabs</name>
+				<action>
+					<function>tryToOpenTabs</function>
+				</action>
+			</node>
+			<node>
+				<name>window, windows</name>
+				<action>
+					<function>tryToOpenWindow</function>
+				</action>
+			</node>
+		</node>
+		<node>
+			<name>text, chat</name>
+			<node>
+				<name>window</name>
+				<action>
+					<function>showTextWindow</function>
+				</action>
+			</node>
+		</node>
+		<save>
+			<keywords>for, to</keywords>
+			<entity>savedInOpen</entity>
+		</save>
+	</node>
+	<node>
+		<name>hear, listen, play, start playing</name>
+		<node>
+			<name>some music, random music</name>
+			<action>
+				<function>randomMusic</function>
+			</action>
+		</node>
+		<node>
+			<name>by</name>
+			<action>
+				<function>play</function>
+				<entity>artist</entity>
+			</action>
+		</node>
+		<action>
+			<function>play</function>
+			<entity>song</entity>
+		</action>
+		<save>
+			<keywords>hear, listen, play, start playing</keywords>
+			<entity>song</entity>
+		</save>
+	</node>
+	<node>
+		<name>find, search</name>
+		<node>
+			<name>in, on</name>
+			<node>
+				<name>page, document</name>
+				<action>
+					<function>findOnPage</function>
+				</action>
+			</node>
+		</node>
+		<save>
+			<keywords>me</keywords>
+			<entity>searchTerm</entity>
+		</save>
+	</node>
+	<node>
+		<name>copy</name>
+		<node>
+			<name>path</name>
+			<node>
+				<name>folder</name>
+				<action>
+					<function>copyPathOfFolder</function>
+				</action>
+			</node>
+		</node>
+	</node>
+	<node>
+		<name>refresh</name>
+		<node>
+			<name>page</name>
+			<action>
+				<function>refreshPage</function>
+			</action>
+		</node>
+	</node>
+	<node>
+		<name>arrange</name>
+		<node>
+			<name>files, folder</name>
+			<node>
+				<name>by</name>
+				<node>
+					<name>name</name>
+					<action>
+						<function>arrangeFolderByName</function>
+					</action>
+				</node>
+				<node>
+					<name>kind</name>
+					<action>
+						<function>arrangeFolderByKind</function>
+					</action>
+				</node>
+				<node>
+					<name>app, application</name>
+					<action>
+						<function>arrangeFolderByApp</function>
+					</action>
+				</node>
+				<node>
+					<name>last opened, last open</name>
+					<action>
+						<function>arrangeFolderByDateLastOpened</function>
+					</action>
+				</node>
+				<node>
+					<name>added, add</name>
+					<action>
+						<function>arrangeFolderByDateAdded</function>
+					</action>
+				</node>
+				<node>
+					<name>modified</name>
+					<action>
+						<function>arrangeFolderByDateModified</function>
+					</action>
+				</node>
+				<node>
+					<name>created</name>
+					<action>
+						<function>arrangeFolderByDateCreated</function>
+					</action>
+				</node>
+				<node>
+					<name>size, sizes</name>
+					<action>
+						<function>arrangeFolderBySize</function>
+					</action>
+				</node>
+				<node>
+					<name>tags, tag</name>
+					<action>
+						<function>arrangeFolderByTags</function>
+					</action>
+				</node>
+			</node>
+		</node>
+	</node>
+	<node>
+		<name>zoom in</name>
+		<action>
+			<function>zoomIn</function>
+		</action>
+	</node>
+	<node>
+		<name>zoom out</name>
+		<action>
+			<function>zoomOut</function>
+		</action>
+	</node>
+	<node>
+		<name>zoom reset</name>
+		<action>
+			<function>zoomReset</function>
+		</action>
+	</node>
+	<node>
+		<name>reset</name>
+		<node>
+			<name>zoom</name>
+			<action>
+				<function>zoomReset</function>
+			</action>
+		</node>
+	</node>
+	<node>
+		<name>remind me, remind</name>
+		<node>
+			<name>in, at, by, on</name>
+			<action>
+				<function>remindWithDate</function>
+				<entity>dateToRemind</entity>
+			</action>
+		</node>
+		<action>
+			<keywords>to, that</keywords>
+			<function>remindWithNoDate</function>
+			<entity>thingToRemind</entity>
+		</action>
+		<save>
+			<keywords>to, that</keywords>
+			<entity>thingToRemindSaved</entity>
+		</save>
+	</node>
+	<node>
+		<name>hide</name>
+		<node>
+			<name>text, chat</name>
+			<node>
+				<name>window</name>
+				<action>
+					<function>hideTextWindow</function>
+				</action>
+			</node>
+		</node>
+	</node>
+	<node>
+		<name>quit, close, exit</name>
+		<action>
+			<keywords>the</keywords>
+			<function>quitCertainApp</function>
+			<entity>appToQuit</entity>
+		</action>
+		<node>
+			<name>this, that, current, focused, front</name>
+			<node>
+				<name>window, application, app</name>
+				<action>
+					<function>quitCurrentApp</function>
+				</action>
+			</node>
+		</node>
+	</node>
+	<node>
+		<name>show</name>
+		<node>
+			<name>desktop</name>
+			<action>
+				<function>showDesktop</function>
+			</action>
+		</node>
+	</node>
+	<node>
+		<name>go, show</name>
+		<node>
+			<name>full screen, full-screen</name>
+			<action>
+				<function>showWindowFullScreen</function>
+			</action>
+		</node>
+	</node>
+	<node>
+		<name>minimize</name>
+		<node>
+			<name>window</name>
+			<action>
+				<function>minimizeWindow</function>
+			</action>
+		</node>
+	</node>
+	<node>
+		<name>hide</name>
+		<node>
+			<name>window</name>
+			<action>
+				<function>hideWindow</function>
+			</action>
+		</node>
+	</node>
+	<node>
+		<name>start</name>
+		<node>
+			<name>dictation, dictate</name>
+			<action>
+				<function>startDictation</function>
+			</action>
+		</node>
+	</node>
+	<node>
+		<name>show, see</name>
+		<node>
+			<name>windows</name>
+			<action>
+				<function>showAllWindows</function>
+			</action>
+		</node>
+		<node>
+			<name>only this, only that</name>
+			<node>
+				<name>window, application, app</name>
+				<action>
+					<function>showOnlyCurrentWindow</function>
+				</action>
+			</node>
+		</node>
+		<node>
+			<name>only></name>
+			<node>
+				<name>current</name>
+				<node>
+					<name>window, application, app</name>
+					<action>
+						<function>showOnlyCurrentWindow</function>
+					</action>
+				</node>
+			</node>
+		</node>
+	</node>
+	<node>
+		<name>focus</name>
+		<node>
+			<name>this, that, current</name>
+			<node>
+				<name>window, application, app</name>
+				<action>
+					<function>showOnlyCurrentWindow</function>
+				</action>
+			</node>
+		</node>
+	</node>
+	<node>
+		<name>selection, selected</name>
+		<node>
+			<name>screenshot</name>
+			<action>
+				<function>takeSelectionScreenshot</function>
+			</action>
+		</node>
+	</node>
+	<node>
+		<name>screenshot</name>
+		<node>
+			<name>window</name>
+			<action>
+				<function>takeWindowScreenshot</function>
+			</action>
+		</node>
+		<node>
+			<name>screen</name>
+			<action>
+				<function>takeScreenScreenshot</function>
+			</action>
+		</node>
+		<node>
+			<name>by</name>
+			<node>
+				<name>selection, selected</name>
+				<action>
+					<function>takeSelectionScreenshot</function>
+				</action>
+			</node>
+			<node>
+				<name>window</name>
+				<action>
+					<function>takeWindowScreenshot</function>
+				</action>
+			</node>
+		</node>
+		<action>
+			<function>takeScreenScreenshot</function>
+		</action>
+	</node>
+	<node>
+		<name>show me, look at</name>
+		<node>
+			<name>this, that</name>
+			<action>
+				<function>quickLook</function>
+			</action>
+		</node>
+	</node>
+	<node>
+		<name>want, would like, please</name>
+		<node>
+			<name>see this, see that, look this, look that</name>
+			<action>
+				<function>quickLook</function>
+			</action>
+		</node>
+	</node>
+	<node>
+		<name>take, let me, can i, can you</name>
+		<node>
+			<name>look, see</name>
+			<node>
+				<name>this, that</name>
+				<action>
+					<function>quickLook</function>
+				</action>
+			</node>
+		</node>
+	</node>
+	<node>
+		<name>quick look</name>
+		<action>
+			<function>quickLook</function>
+		</action>
+	</node>
+	<node>
+		<name>create</name>
+		<node>
+			<name>new</name>
+			<node>
+				<name>folder</name>
+				<node>
+					<name>named as, named, name</name>
+					<action>
+						<function>createNewFolder</function>
+						<entity>folderName</entity>
+					</action>
+				</node>
+				<action>
+					<function>createNewFolder</function>
+				</action>
+			</node>
+		</node>
+	</node>
+	<node>
+		<name>search</name>
+		<node>
+			<name>on</name>
+			<node>
+				<name>computer, comp</name>
+				<action>
+					<function>searchComputer</function>
+				</action>
+			</node>
+		</node>
+		<node>
+			<name>computer, comp</name>
+			<action>
+				<function>searchComputer</function>
+				<keywords>for</keywords>
+				<entity>searchTermComputer</entity>
+			</action>
+		</node>
+		<save>
+			<keywords>for</keywords>
+			<entity>searchTermComputer</entity>
+		</save>
+	</node>
+	<node>
+		<name>what, what's</name>
+		<node>
+			<name>'s, is, the</name>
+			<node>
+				<name>the time, time</name>
+				<action>
+					<function>whatIsTheTime</function>
+				</action>
+			</node>
+		</node>
+		<node>
+			<name>time</name>
+			<node>
+				<name>'s, is</name>
+				<node>
+					<name>it</name>
+					<action>
+						<function>whatIsTheTime</function>
+					</action>
+				</node>
+			</node>
+		</node>
+	</node>
+	<node>
+		<name>set, start</name>
+		<node>
+			<name>timer</name>
+			<node>
+				<name>for, of</name>
+				<action>
+					<function>startTimer</function>
+					<entity>timerDuration</entity>
+				</action>
+			</node>
+			<action>
+				<function>startTimerSaved</function>
+			</action>
+		</node>
+		<save>
+			<keywords>a</keywords>
+			<entity>timerDurationSaved</entity>
+		</save>
+	</node>
+	<node>
+		<name>copy and paste</name>
+		<node>
+			<name>this, that</name>
+			<node>
+				<name>into, in, inside</name>
+				<action>
+					<function>copyAndPateThisInto</function>
+					<entity>appToPasteInto</entity>
+				</action>
+			</node>
+		</node>
+	</node>
+	<node>
+		<name>put, move</name>
+		<node>
+			<name>window</name>
+			<node>
+				<name>right</name>
+				<action>
+					<function>putWindowToRight</function>
+				</action>
+			</node>
+			<node>
+				<name>left</name>
+				<action>
+					<function>putWindowToLeft</function>
+				</action>
+			</node>
+			<node>
+				<name>center</name>
+				<action>
+					<function>putWindowToCenter</function>
+				</action>
+			</node>
+		</node>
+	</node>
+	<node>
+		<name>stop listen, stop listening</name>
+		<action>
+			<function>stopListening</function>
+		</action>
+	</node>
+	<node>
+		<name>what</name>
+		<node>
+			<name>can i</name>
+			<node>
+				<name>say, do</name>
+				<action>
+					<function>whatCommandsCanISay</function>
+				</action>
+			</node>
+		</node>
+		<node>
+			<name>commands</name>
+			<node>
+				<name>available</name>
+				<action>
+					<function>whatCommandsCanISay</function>
+				</action>
+			</node>
+			<node>
+				<name>can</name>
+				<node>
+					<name>do</name>
+					<action>
+						<function>whatCommandsCanISay</function>
+					</action>
+				</node>
+			</node>
+		</node>
+	</node>
+	<node>
+		<name>what can you do, what can i ask</name>
+		<action>
+			<function>whatCommandsCanISay</function>
+		</action>
+	</node>
+	<node>
+		<name>post, write</name>
+		<node>
+			<name>facebook</name>
+			<action>
+				<function>facebook</function>
+				<entity>content</entity>
+			</action>
+		</node>
+		<node>
+			<name>twitter</name>
+			<action>
+				<function>twitter</function>
+				<entity>content</entity>
+			</action>
+		</node>
+		<node>
+			<name>wall</name>
+			<action>
+				<function>facebook</function>
+				<entity>content</entity>
+			</action>
+		</node>
+	</node>
+	<node>
+		<name>give, get</name>
+		<node>
+			<name>information, info</name>
+			<action>
+				<function>wikipedia</function>
+				<keywords>about, on, regarding</keywords>
+				<entity>searchTerm</entity>
+			</action>
+		</node>
+	</node>
+	<node>
+		<name>disable conversation</name>
+		<action>
+			<function>disableConversation</function>
+		</action>
+	</node>
+	<node>
+		<name>enable conversation</name>
+		<action>
+			<function>enableConversation</function>
+		</action>
+	</node>
+	<node>
+		<name>pronounce, how do you say</name>
+		<action>
+			<function>pronouncePhrase</function>
+			<entity>phraseToPronounce</entity>
+		</action>
+	</node>
+	<node>
+		<name>definition, define</name>
+		<action>
+			<function>definePhrase</function>
+			<entity>phraseToDefine</entity>
+		</action>
+	</node>
+	<node>
+		<name>what's the weather, what is the weather</name>
+		<action>
+			<function>whatIsTheWeather</function>
+		</action>
+	</node>
+	<node>
+		<name>is it cold, is it hot</name>
+		<node>
+			<name>now, today, tomorrow, right now</name>
+			<action>
+				<function>whatIsTheWeather</function>
+			</action>
+		</node>
+	</node>
+	<node>
+		<name>volume up</name>
+		<action>
+			<function>turnVloumeUp</function>
+		</action>
+	</node>
+	<node>
+		<name>volume down</name>
+		<action>
+			<function>turnVloumeDown</function>
+		</action>
+	</node>
+	<node>
+		<name>turn</name>
+		<node>
+			<name>volume up</name>
+			<action>
+				<function>turnVloumeUp</function>
+			</action>
+		</node>
+		<node>
+			<name>volume down</name>
+			<action>
+				<function>turnVloumeDown</function>
+			</action>
+		</node>
+		<node>
+			<name>up</name>
+			<node>
+				<name>volume</name>
+				<action>
+					<function>turnVloumeUp</function>
+				</action>
+			</node>
+		</node>
+		<node>
+			<name>down</name>
+			<node>
+				<name>volume</name>
+				<action>
+					<function>turnVloumeDown</function>
+				</action>
+			</node>
+		</node>
+	</node>
+	<ndoe>
+		<name>record screen</name>
+		<action>
+			<function>recordEntireScreen</function>
+		</action>
+	</ndoe>
+	<node>
+		<name>twitt</name>
+		<action>
+			<function>twitter</function>
+			<entity>content</entity>
+		</action>
+	</node>
+</commands>

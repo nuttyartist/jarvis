@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>knowledge_files/websites.json</file>
+        <file>knowledge_files/applications.json</file>
+        <file>knowledge_files/web_browsers.json</file>
+        <file>knowledge_files/search_engines.json</file>
+    </qresource>
+</RCC>
