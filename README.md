@@ -8,6 +8,6 @@ https://www.deus-ai.com/
 
 - Qt (core, gui, network, multimedia, concurrent, qml, quick)
 - Boost (tree structure for AER)
-- Procupine (wake-up-word detection)
+- Porcupine (wake-up-word detection)
 - Google API's (Speech-to-text and Text-to-speech)
 - GRPC (to communicate with google api's in real-time streaming)
