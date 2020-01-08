@@ -2,7 +2,7 @@
 
 TextToSpeech::TextToSpeech(QObject *parent)
     : QObject(parent),
-      m_key(QStringLiteral("AIzaSyArsmLpikL3jCdneTF4fs5AnQI-yoh9El8")),
+      m_key(QStringLiteral("paste-key-here")),
       m_network_access_manager(new QNetworkAccessManager(this)),
       m_audioBuffer(new QBuffer(this)),
       m_paused(false)
@@ -16,7 +16,7 @@ TextToSpeech::~TextToSpeech()
 
 void TextToSpeech::initialize()
 {
-    //m_key = QStringLiteral("AIzaSyArsmLpikL3jCdneTF4fs5AnQI-yoh9El8");
+    //m_key = QStringLiteral("paste-key-here");
     //m_network_access_manager = new QNetworkAccessManager(this);
     //m_audioBuffer = new QBuffer(this);
     //m_paused = false;
