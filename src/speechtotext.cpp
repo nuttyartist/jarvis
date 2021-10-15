@@ -225,8 +225,8 @@ void SpeechToText::start_speech_to_text()
 
 void SpeechToText::set_talking(bool is_talking)
 {
-    // Add the seconds it takes for Deus to talk.
-    // While preserving the timer since Deus started to talk
+    // Add the seconds it takes for Jarvis to talk.
+    // While preserving the timer since Jarvis started to talk
     if(is_talking)
     {
         m_start_time_talking = time(nullptr);

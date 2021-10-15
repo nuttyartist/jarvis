@@ -14,7 +14,7 @@ void WakeUpWord::initialize()
     //const char* p = str.c_str();
 
     QString path_1 = qApp->applicationDirPath() + "/Porcupine/lib/common/porcupine_params.pv";
-    QString path_2 = qApp->applicationDirPath() + "/Porcupine/hey_deus_mac_2020-01-26.ppn";
+    QString path_2 = qApp->applicationDirPath() + "/Porcupine/jarvis_mac.ppn";
     std::string p1 = path_1.toStdString();
     std::string p2 = path_2.toStdString();
     char p1_array[p1.length()+1];

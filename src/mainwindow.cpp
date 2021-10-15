@@ -81,7 +81,7 @@ QString get_random_number_string()
 
 void MainWindow::set_up_settings()
 {
-    settingsDatabase = new QSettings(QStringLiteral("%1/.deus/settings.ini").arg(QDir::homePath()), QSettings::IniFormat);
+    settingsDatabase = new QSettings(QStringLiteral("%1/.jarvis/settings.ini").arg(QDir::homePath()), QSettings::IniFormat);
     settingsDatabase->setFallbacksEnabled(false);
 
     if(settingsDatabase->value("userID", "NULL") == "NULL")
@@ -230,7 +230,7 @@ void MainWindow::setupTrayIcon()
     m_tray_icon_menu->addSeparator();
     m_tray_icon_menu->addAction(m_quit_action);
 
-    QIcon icon(":images/deus_system_tray_regular.png");
+    QIcon icon(":images/jarvis_system_tray_regular.png");
     m_tray_icon->setIcon(icon);
     m_tray_icon->setContextMenu(m_tray_icon_menu);
     m_tray_icon->show();
@@ -284,13 +284,13 @@ void MainWindow::setupTrayIcon()
 
     connect(&speech_to_text_engine, &SpeechToText::in_speech_to_text, this, [this](){
         if (m_tray_icon) {
-            QIcon icon(":images/deus_system_tray_listening.png");
+            QIcon icon(":images/jarvis_system_tray_listening.png");
             m_tray_icon->setIcon(icon);
         }
     });
 
     connect(&speech_to_text_engine, &SpeechToText::out_of_speech_to_text, this, [this](){
-        QIcon icon(":images/deus_system_tray_regular.png");
+        QIcon icon(":images/jarvis_system_tray_regular.png");
         m_tray_icon->setIcon(icon);
     });
 }
@@ -352,7 +352,7 @@ void MainWindow::opening()
 void MainWindow::setUpVariables()
 {
     m_is_allow_conversation = true;
-    m_assistant_name = "Deus";
+    m_assistant_name = "Jarvis";
     m_is_already_done_opening = false;
     //m_is_follow_up_command = false;
 }

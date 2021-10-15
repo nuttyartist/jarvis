@@ -1659,7 +1659,7 @@ void Skills::WhatCommandsCanISay(Command* bestMatch)
     QString string_to_say = "Showing all supported commands. There are going to be many more to come.";
     emit to_say(string_to_say);
 
-    std::string url_to_open = "https://www.deus-ai.com";
+    std::string url_to_open = "https://www.get-jarvis.com";
     OpenUrl(url_to_open);
 
     emit finished_executing_skill();

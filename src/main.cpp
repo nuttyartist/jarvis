@@ -18,10 +18,10 @@ int main(int argc, char *argv[])
 
     MainWindow main_window;
 
-    if(!QDir(QStringLiteral("%1/.deus").arg(QDir::homePath())).exists())
+    if(!QDir(QStringLiteral("%1/.jarvis").arg(QDir::homePath())).exists())
     {
         // Setup
-        QDir().mkdir(QStringLiteral("%1/.deus").arg(QDir::homePath()));
+        QDir().mkdir(QStringLiteral("%1/.jarvis").arg(QDir::homePath()));
     }
 
     main_window.show();

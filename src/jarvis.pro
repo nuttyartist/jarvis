@@ -8,7 +8,7 @@ QT       += core gui network multimedia concurrent qml quick
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = Deus
+TARGET = Jarvis
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -38,8 +38,8 @@ macx {
     LIBS += -framework Carbon
 
     #Procupine
-    INCLUDEPATH += /Users/ruby/MEGA/Projects/Deus/Packaging/Porcupine/include
-    LIBS += -L/Users/ruby/MEGA/Projects/Deus/Packaging/Porcupine/lib/mac/x86_64
+    INCLUDEPATH += /Users/ruby/MEGA/Projects/Jarvis/Packaging/Porcupine/include
+    LIBS += -L/Users/ruby/MEGA/Projects/Jarvis/Packaging/Porcupine/lib/mac/x86_64
     LIBS += -lpv_porcupine
 
     CONFIG -= no-pkg-config
@@ -55,7 +55,7 @@ macx {
     INCLUDEPATH += /Users/ruby/gitrepos/googleapis/gens
 }
 
-ICON = $$PWD/images\deus_icon.icns
+ICON = $$PWD/images\jarvis_icon.icns
 
 SOURCES += \
         main.cpp \

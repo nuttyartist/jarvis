@@ -13,11 +13,11 @@
         <file>images/yellowHovered.png</file>
         <file>images/yellowPressed.png</file>
         <file>images/terminal-icon.png</file>
-        <file>images/deus_icon.png</file>
-        <file>images/deus_system_tray_listening.png</file>
-        <file>images/deus_system_tray_listening@2x.png</file>
-        <file>images/deus_system_tray_regular.png</file>
-        <file>images/deus_system_tray_regular@2x.png</file>
+        <file>images/jarvis_icon.png</file>
+        <file>images/jarvis_system_tray_listening.png</file>
+        <file>images/jarvis_system_tray_listening@2x.png</file>
+        <file>images/jarvis_system_tray_regular.png</file>
+        <file>images/jarvis_system_tray_regular@2x.png</file>
         <file>images/background.png</file>
         <file>images/lightbulb.png</file>
     </qresource>
